@@ -24,7 +24,7 @@ Ensure you have the following installed:
 ### Installation
 Clone the repository and install dependencies:
 ```sh
-git clone https://github.com/your-repo/search-microservice.git
+git clone https://github.com/yahna8/search-microservice.git
 cd search-microservice
 pip install -r requirements.txt
 ```
