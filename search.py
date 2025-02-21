@@ -24,10 +24,14 @@ from rapidfuzz import process, fuzz
 app = FastAPI()
 
 # External API source
-EXTERNAL_API = "https://openlibrary.org/search.json"
+EXTERNAL_API = {
+    "books": "https://openlibrary.org/search.json"
+}
 
 # Main Program API Endpoint
-MAIN_APP_API = "http://127.0.0.1:5001/get_data"
+MAIN_APP_API = {
+    "book_journal": "http://127.0.0.1:5001/get_data"
+}
 
 
 def search_external_api(source: str, query: str, limit: int):
