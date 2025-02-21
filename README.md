@@ -58,6 +58,20 @@ Searches an external API (e.g., Open Library) for books.
 | `query`    | `str` | The search term. |
 | `limit`    | `int` | (Optional) Max results to return. Default: `5`. |
 
+**Example Usage (python)**
+```python
+import requests
+
+SEARCH_SERVICE_URL = "http://127.0.0.1:8000"
+
+endpoint = f"{SEARCH_SERVICE_URL}/search_external"
+params = {"source": "books", "query": {query}, "limit": {limit}}
+
+response = requests.get(endpoint, params=params)
+response.raise_for_status()
+data = response.json()
+```
+
 ### Search Local Data
 **Endpoint:**
 ```sh
@@ -75,6 +89,20 @@ Searches locally stored data from the main program (e.g., journal, inventory, st
 | `query`    | `str` | The search term. |
 | `fuzz_threshold` | `int` | (Optional) Min similarity (0-100). Default: `80`. |
 | `limit`    | `int` | (Optional) Max results to return. Default: `5`. |
+
+**Example Usage (python)**
+```python
+import requests
+
+SEARCH_SERVICE_URL = "http://127.0.0.1:8000"
+
+endpoint = f"{SEARCH_SERVICE_URL}/search_local"
+params = {"query": {query}, "limit": {limit}, "fuzz_threshold": {fuzz_threshold}}
+
+response = requests.get(endpoint, params=params)
+response.raise_for_status()
+data = response.json()
+```
 
 ## How it Works
 
