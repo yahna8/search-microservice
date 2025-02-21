@@ -27,7 +27,7 @@ app = FastAPI()
 EXTERNAL_API = "https://openlibrary.org/search.json"
 
 # Main Program API Endpoint
-MAIN_APP_API = "http://127.0.0.1:5001/get_inventory"
+MAIN_APP_API = "http://127.0.0.1:5001/get_data"
 
 
 def search_external_api(source: str, query: str, limit: int):
