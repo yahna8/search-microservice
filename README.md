@@ -104,12 +104,6 @@ response.raise_for_status()
 data = response.json()
 ```
 
-## How it Works
+## UML Diagram:
 
-### External API Search
- - Calls Open Library (or other APIs) to fetch results.
- - Returns books or other external data.
-
-### Local Data Search
- - Calls the main application to retrieve inventory or store items.
- - Uses fuzzy matching (`rapidfuzz`) to find best matches.
+![UML Sequence Diagram](uml_sequence_diagram.png)
